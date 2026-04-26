@@ -1,12 +1,12 @@
 ---
+
 title: Federated Learning with Homomorphic Encryption
-emoji: 🧠
 colorFrom: blue
 colorTo: indigo
-sdk: docker
+sdk: streamlit
 app_file: app/app.py
 pinned: false
----
+-------------
 
 # Federated Vision Transformer with Homomorphic Encryption for Privacy-Preserving Medical AI
 
@@ -18,39 +18,38 @@ A scalable federated learning framework for medical image classification under n
 
 ---
 
-## Project Highlights
+## Overview
 
-* Privacy-preserving federated learning using Vision Transformers
-* Integration of CKKS homomorphic encryption with minimal accuracy degradation
-* Achieved **94.41% accuracy with encryption (~0.5% drop)**
-* System-level evaluation including latency, memory usage, and communication overhead
+This project addresses the challenge of training deep learning models on sensitive medical data distributed across multiple institutions, where data sharing is not permitted.
 
----
+The system combines:
 
-## Research Context
+* Federated Learning (FL)
+* Vision Transformers (ViT)
+* Homomorphic Encryption (CKKS via TenSEAL)
 
-This work extends a capstone project into a research manuscript currently under review at *Elsevier (Future Generation Computer Systems)*.
+to enable **secure model training without exposing raw data**.
 
 ---
 
 ## Key Contributions
 
-* Federated learning under non-IID client distributions
-* Vision Transformer (ViT) architecture for medical image classification
-* Selective parameter sharing (FeSViBS framework)
-* Integration of CKKS-based homomorphic encryption using TenSEAL
+* Federated learning under **non-IID client distributions**
+* Vision Transformer-based architecture for medical image classification
+* Selective parameter sharing (**FeSViBS framework**)
+* Integration of CKKS homomorphic encryption
 * Secure aggregation under an honest-but-curious threat model
 
 ---
 
 ## System Architecture
 
-![Architecture](results/plots/architecture2.png)
+![Architecture](assets/architecture.png)
 
-The system simulates multiple distributed clients performing local training. Only encrypted model parameters are shared with a central server.
+The system simulates multiple distributed clients performing local training. Only encrypted model parameters are transmitted to a central server.
 
 * No raw data exchange
-* Encrypted parameter transmission
+* Encrypted parameter sharing
 * Secure aggregation
 
 ---
@@ -58,7 +57,7 @@ The system simulates multiple distributed clients performing local training. Onl
 ## Dataset
 
 * BloodMNIST (MedMNIST v2)
-* 8-class classification problem
+* 8-class classification
 * 17,092 samples
 * Non-IID distribution across 6 clients
 
@@ -78,21 +77,17 @@ The system simulates multiple distributed clients performing local training. Onl
 
 ---
 
-### Training Behavior
+### Global Accuracy Trend
 
-#### Client Accuracy
+![Accuracy](assets/accuracy.png)
 
-![Client Accuracy](results/plots/client__acc.png)
-
-#### Client Loss
-
-![Client Loss](results/plots/client__loss.png)
+The model demonstrates stable convergence under non-IID conditions.
 
 ---
 
 ### Confusion Matrix (Final Round)
 
-![Confusion Matrix](results/plots/confusion__matrix.png)
+![Confusion Matrix](assets/confusion_matrix.png)
 
 The strong diagonal structure indicates consistent classification performance across all classes.
 
@@ -102,44 +97,19 @@ The strong diagonal structure indicates consistent classification performance ac
 
 ### Encryption Overhead
 
-![Encryption Time](results/plots/enc_time.png)
+![Encryption Time](assets/encryption_time.png)
 
-* Average encryption time per client: **~65–73 seconds**
-* Homomorphic aggregation + decryption: **~69 seconds**
-
----
-
-### Memory Utilization
-
-#### CPU Memory
-
-![CPU Memory](results/plots/cpu_memory.png)
-
-#### GPU Memory
-
-![GPU Memory](results/plots/gpu_memory.png)
-
-* CPU usage: **~15–16 GB**
-* GPU usage: **~6–8 GB**
-
----
-
-## Global Metrics
-
-![Balanced Accuracy](results/plots/global_balanced_acc.png)
-
-![Precision Recall F1](results/plots/global_prf.png)
-
-The model improves from approximately **0.68 → 0.81 balanced accuracy**, demonstrating stable convergence.
+* Average encryption time per client: ~65–73 seconds
+* Homomorphic aggregation + decryption: ~69 seconds
 
 ---
 
 ## Key Insights
 
 * Homomorphic encryption introduces **<1% accuracy degradation**
-* Selective encryption reduces computational overhead
+* Selective encryption significantly reduces computational overhead
 * Stable convergence achieved under non-IID settings
-* Demonstrates feasibility of privacy-preserving AI in healthcare
+* Demonstrates feasibility of privacy-preserving AI in healthcare environments
 
 ---
 
@@ -147,11 +117,11 @@ The model improves from approximately **0.68 → 0.81 balanced accuracy**, demon
 
 ```bash
 src/        # Federated learning pipeline
-models/     # Model architectures (ViT, FeSViBS)
-he/         # Homomorphic encryption utilities
+models/     # Model architectures
+he/         # Homomorphic encryption logic
 app/        # Streamlit interface and inference
 data/       # Dataset handling and preprocessing
-results/    # Logs and evaluation plots
+assets/     # Selected visualizations for documentation
 ```
 
 ---
@@ -167,11 +137,7 @@ results/    # Logs and evaluation plots
 
 ---
 
-## Demo
-
-The project includes a Streamlit-based interface for inference.
-
-To run locally:
+## How to Run (Local)
 
 ```bash
 pip install -r requirements.txt
@@ -180,11 +146,19 @@ python app/app.py
 
 ---
 
+## Demo
+
+The project includes a Streamlit-based interface for inference.
+
+Upload a blood cell image to obtain predictions using the trained Vision Transformer model.
+
+---
+
 ## Privacy and Security
 
-* Secure aggregation via homomorphic encryption
-* Honest-but-curious adversarial model
+* Secure aggregation using homomorphic encryption
 * No exchange of raw client data
+* Designed for cross-silo federated learning environments
 
 ---
 
