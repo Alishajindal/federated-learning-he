@@ -1,6 +1,19 @@
 # Federated Vision Transformer with Homomorphic Encryption for Privacy-Preserving Medical AI
 
-This project presents a federated learning framework for medical image classification under non-IID data distributions, integrating Vision Transformers with CKKS-based homomorphic encryption to enable secure model aggregation without sharing raw data.
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
+![Status](https://img.shields.io/badge/Status-Research%20Project-green)
+
+A scalable federated learning framework for medical image classification under non-IID data distribution, integrating Vision Transformers with CKKS-based homomorphic encryption for secure and privacy-preserving model aggregation.
+
+---
+
+## Project Highlights
+
+* Privacy-preserving federated learning using Vision Transformers
+* Integration of CKKS homomorphic encryption with minimal accuracy degradation
+* Achieved **94.41% accuracy with encryption (~0.5% drop)**
+* System-level evaluation including latency, memory usage, and communication overhead
 
 ---
 
@@ -24,20 +37,20 @@ This work extends a capstone project into a research manuscript currently under 
 
 ![Architecture](results/plots/architecture2.png)
 
-The system simulates multiple distributed clients performing local training. Only encrypted model parameters (selected transformer components) are transmitted to the central server for aggregation.
+The system simulates multiple distributed clients performing local training. Only encrypted model parameters are shared with a central server.
 
-* No raw data exchange between clients
+* No raw data exchange
 * Encrypted parameter transmission
-* Centralized secure aggregation
+* Secure aggregation
 
 ---
 
 ## Dataset
 
 * BloodMNIST (MedMNIST v2)
-* 8-class blood cell classification
+* 8-class classification problem
 * 17,092 samples
-* Non-IID partitioning across 6 clients
+* Non-IID distribution across 6 clients
 
 ---
 
@@ -81,8 +94,8 @@ The strong diagonal structure indicates consistent classification performance ac
 
 ![Encryption Time](results/plots/enc_time.png)
 
-* Average encryption time per client: approximately 65–73 seconds
-* Homomorphic aggregation and decryption: approximately 69 seconds
+* Average encryption time per client: **~65–73 seconds**
+* Homomorphic aggregation + decryption: **~69 seconds**
 
 ---
 
@@ -96,8 +109,8 @@ The strong diagonal structure indicates consistent classification performance ac
 
 ![GPU Memory](results/plots/gpu_memory.png)
 
-* CPU memory usage: approximately 15–16 GB
-* GPU memory usage: approximately 6–8 GB
+* CPU usage: **~15–16 GB**
+* GPU usage: **~6–8 GB**
 
 ---
 
@@ -107,20 +120,20 @@ The strong diagonal structure indicates consistent classification performance ac
 
 ![Precision Recall F1](results/plots/global_prf.png)
 
-The model demonstrates stable convergence across rounds, improving from approximately 0.68 to 0.81 balanced accuracy.
+The model improves from approximately **0.68 → 0.81 balanced accuracy**, demonstrating stable convergence.
 
 ---
 
 ## Key Insights
 
-* Homomorphic encryption introduces less than 1% degradation in accuracy
-* Selective parameter encryption significantly reduces computational overhead
-* The system achieves stable convergence under non-IID conditions
-* Demonstrates feasibility of privacy-preserving federated learning in healthcare scenarios
+* Homomorphic encryption introduces **<1% accuracy degradation**
+* Selective encryption reduces computational overhead
+* Stable convergence achieved under non-IID settings
+* Demonstrates feasibility of privacy-preserving AI in healthcare
 
 ---
 
-## Project Structure
+## Repository Structure
 
 ```bash
 src/        # Federated learning pipeline
@@ -144,7 +157,11 @@ results/    # Logs and evaluation plots
 
 ---
 
-## How to Run
+## Demo
+
+The project includes a Streamlit-based interface for inference.
+
+To run locally:
 
 ```bash
 pip install -r requirements.txt
@@ -155,7 +172,7 @@ python app/streamlit_app.py
 
 ## Privacy and Security
 
-* Secure aggregation using homomorphic encryption
+* Secure aggregation via homomorphic encryption
 * Honest-but-curious adversarial model
 * No exchange of raw client data
 
@@ -163,8 +180,8 @@ python app/streamlit_app.py
 
 ## Future Work
 
-* Containerized deployment using Docker and Kubernetes
-* Multi-node federated training setup
+* Deployment using Docker and Kubernetes
+* Multi-node federated learning setup
 * Optimization of encryption latency and memory usage
 
 ---
