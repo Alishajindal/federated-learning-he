@@ -1,11 +1,10 @@
-altair
-pandas
 streamlit
 torch
 torchvision
 numpy
-Pillow
+pillow
 matplotlib
 medmnist
 timm
-seaborn
+pandas
+altair
