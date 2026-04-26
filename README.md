@@ -165,7 +165,7 @@ To run locally:
 
 ```bash
 pip install -r requirements.txt
-python app/streamlit_app.py
+python app/app.py
 ```
 
 ---
