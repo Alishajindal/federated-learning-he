@@ -1,0 +1,3374 @@
+[he_utils] TenSEAL version: 0.3.16
+Logging to: vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS
+Getting the Dataset and Dataloader!
+Creating network and Split manager...
+Distribute Images Among Clients
+
+[HE] Creating TenSEAL context...
+[HE] TenSEAL context created.
+
+Start Training!
+
+
+================= ROUND 1/30 =================
+
+Chosen Block:1 for client 0
+client0_train:
+ Loss train:0.643
+balanced accuracy train:0.603
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 64.92 sec | CPU_RSS=9437.898 MB | GPU_peak_reserved=6072.0 MB
+
+Chosen Block:1 for client 1
+client1_train:
+ Loss train:0.387
+balanced accuracy train:0.677
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 69.53 sec | CPU_RSS=15942.859 MB | GPU_peak_reserved=6120.0 MB
+
+Chosen Block:4 for client 2
+client2_train:
+ Loss train:0.386
+balanced accuracy train:0.685
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 68.86 sec | CPU_RSS=15946.066 MB | GPU_peak_reserved=7708.0 MB
+
+Chosen Block:6 for client 3
+client3_train:
+ Loss train:0.680
+balanced accuracy train:0.724
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.73 sec | CPU_RSS=15974.391 MB | GPU_peak_reserved=7836.0 MB
+
+Chosen Block:2 for client 4
+client4_train:
+ Loss train:0.592
+balanced accuracy train:0.718
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 90.67 sec | CPU_RSS=16014.5 MB | GPU_peak_reserved=7908.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.447
+balanced accuracy train:0.777
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 90.87 sec | CPU_RSS=16014.504 MB | GPU_peak_reserved=7958.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.66 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 1
+client0_test:
+ Loss test:2.415
+balanced accuracy test:0.506
+Chosen block for testing: 1
+client1_test:
+ Loss test:1.287
+balanced accuracy test:0.514
+Chosen block for testing: 4
+client2_test:
+ Loss test:0.536
+balanced accuracy test:0.774
+Chosen block for testing: 6
+client3_test:
+ Loss test:0.556
+balanced accuracy test:0.758
+Chosen block for testing: 2
+client4_test:
+ Loss test:0.769
+balanced accuracy test:0.744
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.570
+balanced accuracy test:0.764
+Global metrics (round 1): BalancedAcc=0.6765, Precision=0.7812, Recall=0.7236, F1=0.7143, MeanTestLoss=1.0222
+{'round': 1, 'balanced_acc': 0.676512889481206, 'precision': 0.7812029693352285, 'recall': 0.7236188249049985, 'f1': 0.7143275544696164, 'mean_test_loss': 1.0221653278963063, 'mean_train_loss': 0.5226869837964302}
+
+================ END OF ROUND =================
+
+
+================= ROUND 2/30 =================
+
+Chosen Block:5 for client 0
+client0_train:
+ Loss train:0.366
+balanced accuracy train:0.765
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.35 sec | CPU_RSS=16023.531 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:3 for client 1
+client1_train:
+ Loss train:0.217
+balanced accuracy train:0.832
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.10 sec | CPU_RSS=16049.992 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:6 for client 2
+client2_train:
+ Loss train:0.226
+balanced accuracy train:0.826
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 71.96 sec | CPU_RSS=15996.043 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:4 for client 3
+client3_train:
+ Loss train:0.405
+balanced accuracy train:0.813
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.78 sec | CPU_RSS=16022.957 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:1 for client 4
+client4_train:
+ Loss train:0.403
+balanced accuracy train:0.787
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.48 sec | CPU_RSS=16049.992 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:1 for client 5
+client5_train:
+ Loss train:0.390
+balanced accuracy train:0.836
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 70.49 sec | CPU_RSS=15996.043 MB | GPU_peak_reserved=8154.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.39 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 5
+client0_test:
+ Loss test:0.322
+balanced accuracy test:0.889
+Chosen block for testing: 3
+client1_test:
+ Loss test:0.527
+balanced accuracy test:0.843
+Chosen block for testing: 6
+client2_test:
+ Loss test:0.410
+balanced accuracy test:0.867
+Chosen block for testing: 4
+client3_test:
+ Loss test:0.376
+balanced accuracy test:0.887
+Chosen block for testing: 1
+client4_test:
+ Loss test:0.442
+balanced accuracy test:0.834
+Chosen block for testing: 1
+client5_test:
+ Loss test:0.442
+balanced accuracy test:0.834
+Global metrics (round 2): BalancedAcc=0.8589, Precision=0.8691, Recall=0.8546, F1=0.8454, MeanTestLoss=0.4198
+{'round': 2, 'balanced_acc': 0.858880456277526, 'precision': 0.8691290986157291, 'recall': 0.8546234044626327, 'f1': 0.8454087198578535, 'mean_test_loss': 0.41978655012761373, 'mean_train_loss': 0.33446204518638284}
+
+================ END OF ROUND =================
+
+
+================= ROUND 3/30 =================
+
+Chosen Block:1 for client 0
+client0_train:
+ Loss train:0.284
+balanced accuracy train:0.819
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.53 sec | CPU_RSS=16344.57 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.179
+balanced accuracy train:0.869
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 71.85 sec | CPU_RSS=16371.418 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:2 for client 2
+client2_train:
+ Loss train:0.196
+balanced accuracy train:0.849
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.32 sec | CPU_RSS=16317.469 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:1 for client 3
+client3_train:
+ Loss train:0.346
+balanced accuracy train:0.860
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.55 sec | CPU_RSS=16344.383 MB | GPU_peak_reserved=8154.0 MB
+
+Chosen Block:5 for client 4
+client4_train:
+ Loss train:0.354
+balanced accuracy train:0.815
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.74 sec | CPU_RSS=16371.418 MB | GPU_peak_reserved=8160.0 MB
+
+Chosen Block:5 for client 5
+client5_train:
+ Loss train:0.315
+balanced accuracy train:0.869
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.69 sec | CPU_RSS=16317.469 MB | GPU_peak_reserved=8162.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.61 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 1
+client0_test:
+ Loss test:1.337
+balanced accuracy test:0.588
+Chosen block for testing: 6
+client1_test:
+ Loss test:0.568
+balanced accuracy test:0.777
+Chosen block for testing: 2
+client2_test:
+ Loss test:2.014
+balanced accuracy test:0.466
+Chosen block for testing: 1
+client3_test:
+ Loss test:0.791
+balanced accuracy test:0.722
+Chosen block for testing: 5
+client4_test:
+ Loss test:0.473
+balanced accuracy test:0.820
+Chosen block for testing: 5
+client5_test:
+ Loss test:0.394
+balanced accuracy test:0.828
+Global metrics (round 3): BalancedAcc=0.7003, Precision=0.7760, Recall=0.7089, F1=0.7159, MeanTestLoss=0.9295
+{'round': 3, 'balanced_acc': 0.700294843300731, 'precision': 0.7760391033841116, 'recall': 0.7089057780376108, 'f1': 0.7159073843750487, 'mean_test_loss': 0.9294549357835894, 'mean_train_loss': 0.27884354089223645}
+
+================ END OF ROUND =================
+
+
+================= ROUND 4/30 =================
+
+Chosen Block:4 for client 0
+client0_train:
+ Loss train:0.218
+balanced accuracy train:0.851
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.37 sec | CPU_RSS=16361.188 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.140
+balanced accuracy train:0.883
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 71.97 sec | CPU_RSS=16388.223 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:6 for client 2
+client2_train:
+ Loss train:0.161
+balanced accuracy train:0.879
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.38 sec | CPU_RSS=16338.148 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:2 for client 3
+client3_train:
+ Loss train:0.334
+balanced accuracy train:0.880
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.99 sec | CPU_RSS=16361.188 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.277
+balanced accuracy train:0.863
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 71.57 sec | CPU_RSS=16388.223 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 5
+client5_train:
+ Loss train:0.315
+balanced accuracy train:0.870
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.59 sec | CPU_RSS=16338.148 MB | GPU_peak_reserved=8358.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.54 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 4
+client0_test:
+ Loss test:0.388
+balanced accuracy test:0.860
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.391
+balanced accuracy test:0.847
+Chosen block for testing: 6
+client2_test:
+ Loss test:0.543
+balanced accuracy test:0.814
+Chosen block for testing: 2
+client3_test:
+ Loss test:0.711
+balanced accuracy test:0.746
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.388
+balanced accuracy test:0.860
+Chosen block for testing: 4
+client5_test:
+ Loss test:0.388
+balanced accuracy test:0.860
+Global metrics (round 4): BalancedAcc=0.8313, Precision=0.8731, Recall=0.8500, F1=0.8467, MeanTestLoss=0.4680
+{'round': 4, 'balanced_acc': 0.8312877563301876, 'precision': 0.8731347768887433, 'recall': 0.8499951281301764, 'f1': 0.8466919611194396, 'mean_test_loss': 0.4680190018297714, 'mean_train_loss': 0.24064034599001063}
+
+================ END OF ROUND =================
+
+
+================= ROUND 5/30 =================
+
+Chosen Block:1 for client 0
+client0_train:
+ Loss train:0.237
+balanced accuracy train:0.842
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.56 sec | CPU_RSS=16366.07 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:1 for client 1
+client1_train:
+ Loss train:0.167
+balanced accuracy train:0.863
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 71.95 sec | CPU_RSS=16374.773 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:1 for client 2
+client2_train:
+ Loss train:0.158
+balanced accuracy train:0.868
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 71.79 sec | CPU_RSS=16324.699 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:2 for client 3
+client3_train:
+ Loss train:0.283
+balanced accuracy train:0.884
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.95 sec | CPU_RSS=16347.738 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:3 for client 4
+client4_train:
+ Loss train:0.272
+balanced accuracy train:0.868
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 72.03 sec | CPU_RSS=16374.773 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.248
+balanced accuracy train:0.905
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 73.77 sec | CPU_RSS=16324.699 MB | GPU_peak_reserved=8358.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 77.64 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 1
+client0_test:
+ Loss test:1.308
+balanced accuracy test:0.626
+Chosen block for testing: 1
+client1_test:
+ Loss test:1.667
+balanced accuracy test:0.536
+Chosen block for testing: 1
+client2_test:
+ Loss test:2.939
+balanced accuracy test:0.451
+Chosen block for testing: 2
+client3_test:
+ Loss test:1.697
+balanced accuracy test:0.630
+Chosen block for testing: 3
+client4_test:
+ Loss test:0.797
+balanced accuracy test:0.753
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.270
+balanced accuracy test:0.906
+Global metrics (round 5): BalancedAcc=0.6503, Precision=0.7310, Recall=0.6222, F1=0.6137, MeanTestLoss=1.4462
+{'round': 5, 'balanced_acc': 0.6503274425308421, 'precision': 0.7309993108603207, 'recall': 0.6222352138750853, 'f1': 0.6137147373828419, 'mean_test_loss': 1.4462420208218656, 'mean_train_loss': 0.2272591690811843}
+
+================ END OF ROUND =================
+
+
+================= ROUND 6/30 =================
+
+Chosen Block:5 for client 0
+client0_train:
+ Loss train:0.219
+balanced accuracy train:0.873
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.54 sec | CPU_RSS=16369.523 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 1
+client1_train:
+ Loss train:0.143
+balanced accuracy train:0.889
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.49 sec | CPU_RSS=16378.227 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 2
+client2_train:
+ Loss train:0.140
+balanced accuracy train:0.898
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 72.24 sec | CPU_RSS=16328.152 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 3
+client3_train:
+ Loss train:0.342
+balanced accuracy train:0.907
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.92 sec | CPU_RSS=16351.191 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:2 for client 4
+client4_train:
+ Loss train:0.283
+balanced accuracy train:0.875
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.42 sec | CPU_RSS=16378.227 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 5
+client5_train:
+ Loss train:0.217
+balanced accuracy train:0.888
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.03 sec | CPU_RSS=16328.152 MB | GPU_peak_reserved=8358.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.52 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 5
+client0_test:
+ Loss test:0.640
+balanced accuracy test:0.841
+Chosen block for testing: 4
+client1_test:
+ Loss test:0.456
+balanced accuracy test:0.870
+Chosen block for testing: 5
+client2_test:
+ Loss test:0.640
+balanced accuracy test:0.841
+Chosen block for testing: 5
+client3_test:
+ Loss test:0.640
+balanced accuracy test:0.841
+Chosen block for testing: 2
+client4_test:
+ Loss test:1.004
+balanced accuracy test:0.727
+Chosen block for testing: 4
+client5_test:
+ Loss test:0.456
+balanced accuracy test:0.870
+Global metrics (round 6): BalancedAcc=0.8316, Precision=0.8666, Recall=0.7979, F1=0.8021, MeanTestLoss=0.6394
+{'round': 6, 'balanced_acc': 0.8316206781602935, 'precision': 0.8666328851771334, 'recall': 0.7979148397154828, 'f1': 0.8021351673941246, 'mean_test_loss': 0.6394210249921423, 'mean_train_loss': 0.22394189473681644}
+
+================ END OF ROUND =================
+
+
+================= ROUND 7/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.195
+balanced accuracy train:0.851
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.55 sec | CPU_RSS=16366.148 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.109
+balanced accuracy train:0.906
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.01 sec | CPU_RSS=16374.852 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 2
+client2_train:
+ Loss train:0.109
+balanced accuracy train:0.924
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.70 sec | CPU_RSS=16324.777 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 3
+client3_train:
+ Loss train:0.212
+balanced accuracy train:0.908
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.43 sec | CPU_RSS=16347.816 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.280
+balanced accuracy train:0.864
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.50 sec | CPU_RSS=16378.852 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 5
+client5_train:
+ Loss train:0.189
+balanced accuracy train:0.923
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 70.47 sec | CPU_RSS=16324.777 MB | GPU_peak_reserved=8358.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.45 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.896
+balanced accuracy test:0.689
+Chosen block for testing: 6
+client1_test:
+ Loss test:1.329
+balanced accuracy test:0.562
+Chosen block for testing: 5
+client2_test:
+ Loss test:0.574
+balanced accuracy test:0.822
+Chosen block for testing: 5
+client3_test:
+ Loss test:0.306
+balanced accuracy test:0.884
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.364
+balanced accuracy test:0.792
+Chosen block for testing: 5
+client5_test:
+ Loss test:0.237
+balanced accuracy test:0.919
+Global metrics (round 7): BalancedAcc=0.7779, Precision=0.8195, Recall=0.8019, F1=0.7983, MeanTestLoss=0.6178
+{'round': 7, 'balanced_acc': 0.7779138421786659, 'precision': 0.8194509495262029, 'recall': 0.8018610542726299, 'f1': 0.7982602078567665, 'mean_test_loss': 0.6178061186715409, 'mean_train_loss': 0.18224671161745573}
+
+================ END OF ROUND =================
+
+
+================= ROUND 8/30 =================
+
+Chosen Block:5 for client 0
+client0_train:
+ Loss train:0.149
+balanced accuracy train:0.903
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.90 sec | CPU_RSS=16363.293 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.085
+balanced accuracy train:0.918
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.11 sec | CPU_RSS=16381.52 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 2
+client2_train:
+ Loss train:0.096
+balanced accuracy train:0.928
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 71.80 sec | CPU_RSS=16327.445 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:1 for client 3
+client3_train:
+ Loss train:0.246
+balanced accuracy train:0.885
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.85 sec | CPU_RSS=16350.484 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 4
+client4_train:
+ Loss train:0.228
+balanced accuracy train:0.884
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 71.99 sec | CPU_RSS=16381.52 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.165
+balanced accuracy train:0.932
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.31 sec | CPU_RSS=16327.445 MB | GPU_peak_reserved=8358.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.72 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 5
+client0_test:
+ Loss test:0.204
+balanced accuracy test:0.939
+Chosen block for testing: 6
+client1_test:
+ Loss test:0.322
+balanced accuracy test:0.902
+Chosen block for testing: 4
+client2_test:
+ Loss test:0.164
+balanced accuracy test:0.954
+Chosen block for testing: 1
+client3_test:
+ Loss test:1.390
+balanced accuracy test:0.606
+Chosen block for testing: 5
+client4_test:
+ Loss test:0.204
+balanced accuracy test:0.939
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.224
+balanced accuracy test:0.940
+Global metrics (round 8): BalancedAcc=0.8799, Precision=0.9044, Recall=0.8714, F1=0.8751, MeanTestLoss=0.4179
+{'round': 8, 'balanced_acc': 0.8799418948604956, 'precision': 0.9043855539754311, 'recall': 0.8713826366559485, 'f1': 0.8750542771431534, 'mean_test_loss': 0.4178927520083056, 'mean_train_loss': 0.16154689990225238}
+
+================ END OF ROUND =================
+
+
+================= ROUND 9/30 =================
+
+Chosen Block:4 for client 0
+client0_train:
+ Loss train:0.164
+balanced accuracy train:0.891
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.44 sec | CPU_RSS=16361.938 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:3 for client 1
+client1_train:
+ Loss train:0.089
+balanced accuracy train:0.910
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.49 sec | CPU_RSS=16380.164 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:6 for client 2
+client2_train:
+ Loss train:0.097
+balanced accuracy train:0.932
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 75.23 sec | CPU_RSS=16326.09 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:3 for client 3
+client3_train:
+ Loss train:0.183
+balanced accuracy train:0.930
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 73.81 sec | CPU_RSS=16349.129 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:1 for client 4
+client4_train:
+ Loss train:0.301
+balanced accuracy train:0.883
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 71.55 sec | CPU_RSS=16380.164 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:1 for client 5
+client5_train:
+ Loss train:0.207
+balanced accuracy train:0.917
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.02 sec | CPU_RSS=16326.09 MB | GPU_peak_reserved=8358.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 77.01 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 4
+client0_test:
+ Loss test:1.209
+balanced accuracy test:0.707
+Chosen block for testing: 3
+client1_test:
+ Loss test:1.413
+balanced accuracy test:0.691
+Chosen block for testing: 6
+client2_test:
+ Loss test:0.665
+balanced accuracy test:0.815
+Chosen block for testing: 3
+client3_test:
+ Loss test:1.065
+balanced accuracy test:0.675
+Chosen block for testing: 1
+client4_test:
+ Loss test:0.884
+balanced accuracy test:0.709
+Chosen block for testing: 1
+client5_test:
+ Loss test:0.249
+balanced accuracy test:0.884
+Global metrics (round 9): BalancedAcc=0.7468, Precision=0.7847, Recall=0.7378, F1=0.7303, MeanTestLoss=0.9140
+{'round': 9, 'balanced_acc': 0.7468198563602457, 'precision': 0.7846888773379657, 'recall': 0.737795966091786, 'f1': 0.7303001334724112, 'mean_test_loss': 0.913973700163173, 'mean_train_loss': 0.1735900004339769}
+
+================ END OF ROUND =================
+
+
+================= ROUND 10/30 =================
+
+Chosen Block:1 for client 0
+client0_train:
+ Loss train:0.191
+balanced accuracy train:0.862
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.20 sec | CPU_RSS=16376.211 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.085
+balanced accuracy train:0.932
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.05 sec | CPU_RSS=16394.438 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 2
+client2_train:
+ Loss train:0.089
+balanced accuracy train:0.934
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 71.07 sec | CPU_RSS=16340.363 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 3
+client3_train:
+ Loss train:0.161
+balanced accuracy train:0.923
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 73.86 sec | CPU_RSS=16363.402 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:2 for client 4
+client4_train:
+ Loss train:0.206
+balanced accuracy train:0.903
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 71.02 sec | CPU_RSS=16394.438 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:1 for client 5
+client5_train:
+ Loss train:0.228
+balanced accuracy train:0.900
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.72 sec | CPU_RSS=16340.363 MB | GPU_peak_reserved=8358.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.42 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 1
+client0_test:
+ Loss test:0.256
+balanced accuracy test:0.901
+Chosen block for testing: 6
+client1_test:
+ Loss test:0.468
+balanced accuracy test:0.853
+Chosen block for testing: 4
+client2_test:
+ Loss test:0.352
+balanced accuracy test:0.890
+Chosen block for testing: 5
+client3_test:
+ Loss test:0.319
+balanced accuracy test:0.897
+Chosen block for testing: 2
+client4_test:
+ Loss test:0.292
+balanced accuracy test:0.898
+Chosen block for testing: 1
+client5_test:
+ Loss test:0.256
+balanced accuracy test:0.901
+Global metrics (round 10): BalancedAcc=0.8900, Precision=0.9050, Recall=0.8973, F1=0.8943, MeanTestLoss=0.3237
+{'round': 10, 'balanced_acc': 0.8899529721435038, 'precision': 0.9049633245741571, 'recall': 0.897252265419468, 'f1': 0.8943232041959904, 'mean_test_loss': 0.32371289216349886, 'mean_train_loss': 0.1599877521275588}
+Saved pickles to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS
+Saved state_dict to: vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/final_state_dict.pth
+Saved full model to: vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/final_full_model.pth
+Saved per-client plots to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/plots_per_client
+Saved global plots to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/plots_global
+Saved global confusion matrix to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/confusion_global/global_confusion_matrix.png
+
+================ END OF ROUND =================
+
+
+================= ROUND 11/30 =================
+
+Chosen Block:3 for client 0
+client0_train:
+ Loss train:0.167
+balanced accuracy train:0.891
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.53 sec | CPU_RSS=16363.473 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.092
+balanced accuracy train:0.934
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 71.91 sec | CPU_RSS=16363.473 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:4 for client 2
+client2_train:
+ Loss train:0.083
+balanced accuracy train:0.946
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 73.26 sec | CPU_RSS=16363.473 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:3 for client 3
+client3_train:
+ Loss train:0.184
+balanced accuracy train:0.925
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.68 sec | CPU_RSS=16363.473 MB | GPU_peak_reserved=8358.0 MB
+
+Chosen Block:6 for client 4
+client4_train:
+ Loss train:0.260
+balanced accuracy train:0.895
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 74.05 sec | CPU_RSS=16363.473 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 5
+client5_train:
+ Loss train:0.257
+balanced accuracy train:0.905
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.04 sec | CPU_RSS=16363.473 MB | GPU_peak_reserved=8360.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.42 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 3
+client0_test:
+ Loss test:2.492
+balanced accuracy test:0.542
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.981
+balanced accuracy test:0.749
+Chosen block for testing: 4
+client2_test:
+ Loss test:1.590
+balanced accuracy test:0.550
+Chosen block for testing: 3
+client3_test:
+ Loss test:1.047
+balanced accuracy test:0.755
+Chosen block for testing: 6
+client4_test:
+ Loss test:0.615
+balanced accuracy test:0.779
+Chosen block for testing: 2
+client5_test:
+ Loss test:0.251
+balanced accuracy test:0.900
+Global metrics (round 11): BalancedAcc=0.7127, Precision=0.7898, Recall=0.7207, F1=0.7101, MeanTestLoss=1.1627
+{'round': 11, 'balanced_acc': 0.712708291799296, 'precision': 0.7897668653396658, 'recall': 0.720744421709052, 'f1': 0.7100531751443178, 'mean_test_loss': 1.16267218567247, 'mean_train_loss': 0.1737630681050801}
+
+================ END OF ROUND =================
+
+
+================= ROUND 12/30 =================
+
+Chosen Block:2 for client 0
+client0_train:
+ Loss train:0.175
+balanced accuracy train:0.890
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.60 sec | CPU_RSS=16366.91 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:1 for client 1
+client1_train:
+ Loss train:0.101
+balanced accuracy train:0.913
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.20 sec | CPU_RSS=16366.91 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 2
+client2_train:
+ Loss train:0.092
+balanced accuracy train:0.933
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 74.10 sec | CPU_RSS=16366.91 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:1 for client 3
+client3_train:
+ Loss train:0.233
+balanced accuracy train:0.912
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.72 sec | CPU_RSS=16366.91 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.255
+balanced accuracy train:0.876
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 73.54 sec | CPU_RSS=16366.91 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:1 for client 5
+client5_train:
+ Loss train:0.264
+balanced accuracy train:0.881
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.16 sec | CPU_RSS=16366.91 MB | GPU_peak_reserved=8360.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.71 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 2
+client0_test:
+ Loss test:0.519
+balanced accuracy test:0.853
+Chosen block for testing: 1
+client1_test:
+ Loss test:0.336
+balanced accuracy test:0.889
+Chosen block for testing: 2
+client2_test:
+ Loss test:0.519
+balanced accuracy test:0.853
+Chosen block for testing: 1
+client3_test:
+ Loss test:0.336
+balanced accuracy test:0.889
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.450
+balanced accuracy test:0.873
+Chosen block for testing: 1
+client5_test:
+ Loss test:0.336
+balanced accuracy test:0.889
+Global metrics (round 12): BalancedAcc=0.8742, Precision=0.9055, Recall=0.8859, F1=0.8834, MeanTestLoss=0.4161
+{'round': 12, 'balanced_acc': 0.8741977162524586, 'precision': 0.905525645071279, 'recall': 0.8859008087303907, 'f1': 0.883433906971462, 'mean_test_loss': 0.4161233077009703, 'mean_train_loss': 0.18661868329770312}
+
+================ END OF ROUND =================
+
+
+================= ROUND 13/30 =================
+
+Chosen Block:1 for client 0
+client0_train:
+ Loss train:0.160
+balanced accuracy train:0.886
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.59 sec | CPU_RSS=16365.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.079
+balanced accuracy train:0.950
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.36 sec | CPU_RSS=16365.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:4 for client 2
+client2_train:
+ Loss train:0.087
+balanced accuracy train:0.942
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 73.79 sec | CPU_RSS=16365.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 3
+client3_train:
+ Loss train:0.218
+balanced accuracy train:0.912
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.94 sec | CPU_RSS=16365.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.239
+balanced accuracy train:0.907
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 73.66 sec | CPU_RSS=16365.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:6 for client 5
+client5_train:
+ Loss train:0.182
+balanced accuracy train:0.933
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.91 sec | CPU_RSS=16365.227 MB | GPU_peak_reserved=8360.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.30 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 1
+client0_test:
+ Loss test:0.773
+balanced accuracy test:0.791
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.718
+balanced accuracy test:0.766
+Chosen block for testing: 4
+client2_test:
+ Loss test:1.092
+balanced accuracy test:0.727
+Chosen block for testing: 2
+client3_test:
+ Loss test:0.389
+balanced accuracy test:0.838
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.391
+balanced accuracy test:0.835
+Chosen block for testing: 6
+client5_test:
+ Loss test:0.253
+balanced accuracy test:0.909
+Global metrics (round 13): BalancedAcc=0.8109, Precision=0.8516, Recall=0.8311, F1=0.8280, MeanTestLoss=0.6028
+{'round': 13, 'balanced_acc': 0.8109477128565279, 'precision': 0.8515540828199676, 'recall': 0.8310922732144597, 'f1': 0.8279847917722698, 'mean_test_loss': 0.6027699569125234, 'mean_train_loss': 0.16083377579013813}
+
+================ END OF ROUND =================
+
+
+================= ROUND 14/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.145
+balanced accuracy train:0.906
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.74 sec | CPU_RSS=16382.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.064
+balanced accuracy train:0.951
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 71.73 sec | CPU_RSS=16382.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:3 for client 2
+client2_train:
+ Loss train:0.087
+balanced accuracy train:0.940
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 74.39 sec | CPU_RSS=16382.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 3
+client3_train:
+ Loss train:0.199
+balanced accuracy train:0.936
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.77 sec | CPU_RSS=16382.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.204
+balanced accuracy train:0.917
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 73.93 sec | CPU_RSS=16382.227 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 5
+client5_train:
+ Loss train:0.205
+balanced accuracy train:0.936
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.94 sec | CPU_RSS=16382.227 MB | GPU_peak_reserved=8360.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.43 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.312
+balanced accuracy test:0.919
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.226
+balanced accuracy test:0.936
+Chosen block for testing: 3
+client2_test:
+ Loss test:0.319
+balanced accuracy test:0.913
+Chosen block for testing: 2
+client3_test:
+ Loss test:0.225
+balanced accuracy test:0.932
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.252
+balanced accuracy test:0.928
+Chosen block for testing: 2
+client5_test:
+ Loss test:0.225
+balanced accuracy test:0.932
+Global metrics (round 14): BalancedAcc=0.9270, Precision=0.9251, Recall=0.9185, F1=0.9156, MeanTestLoss=0.2595
+{'round': 14, 'balanced_acc': 0.9270203357821718, 'precision': 0.9250620549032853, 'recall': 0.9184936178505311, 'f1': 0.9156167054794907, 'mean_test_loss': 0.2595441384861867, 'mean_train_loss': 0.1506859659218214}
+
+================ END OF ROUND =================
+
+
+================= ROUND 15/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.115
+balanced accuracy train:0.919
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.50 sec | CPU_RSS=16365.449 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.079
+balanced accuracy train:0.928
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.16 sec | CPU_RSS=16389.457 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:3 for client 2
+client2_train:
+ Loss train:0.079
+balanced accuracy train:0.944
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 71.87 sec | CPU_RSS=16389.457 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:1 for client 3
+client3_train:
+ Loss train:0.251
+balanced accuracy train:0.912
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.75 sec | CPU_RSS=16389.457 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:5 for client 4
+client4_train:
+ Loss train:0.247
+balanced accuracy train:0.928
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 72.36 sec | CPU_RSS=16389.457 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.176
+balanced accuracy train:0.934
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.04 sec | CPU_RSS=16389.457 MB | GPU_peak_reserved=8360.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.49 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.324
+balanced accuracy test:0.915
+Chosen block for testing: 6
+client1_test:
+ Loss test:0.506
+balanced accuracy test:0.841
+Chosen block for testing: 3
+client2_test:
+ Loss test:0.568
+balanced accuracy test:0.800
+Chosen block for testing: 1
+client3_test:
+ Loss test:0.594
+balanced accuracy test:0.830
+Chosen block for testing: 5
+client4_test:
+ Loss test:0.425
+balanced accuracy test:0.798
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.235
+balanced accuracy test:0.905
+Global metrics (round 15): BalancedAcc=0.8481, Precision=0.8637, Recall=0.8526, F1=0.8521, MeanTestLoss=0.4419
+{'round': 15, 'balanced_acc': 0.8480992058581889, 'precision': 0.8636795933277398, 'recall': 0.8525772191367047, 'f1': 0.8521391392597628, 'mean_test_loss': 0.44192090640879345, 'mean_train_loss': 0.15753456249930017}
+
+================ END OF ROUND =================
+
+
+================= ROUND 16/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.127
+balanced accuracy train:0.899
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.50 sec | CPU_RSS=16407.469 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.070
+balanced accuracy train:0.937
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.34 sec | CPU_RSS=16407.469 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:4 for client 2
+client2_train:
+ Loss train:0.073
+balanced accuracy train:0.947
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.90 sec | CPU_RSS=16407.469 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:1 for client 3
+client3_train:
+ Loss train:0.159
+balanced accuracy train:0.927
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.40 sec | CPU_RSS=16407.469 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:3 for client 4
+client4_train:
+ Loss train:0.215
+balanced accuracy train:0.913
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 71.87 sec | CPU_RSS=16407.469 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:1 for client 5
+client5_train:
+ Loss train:0.191
+balanced accuracy train:0.911
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.05 sec | CPU_RSS=16407.469 MB | GPU_peak_reserved=8360.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.68 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.231
+balanced accuracy test:0.936
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.187
+balanced accuracy test:0.942
+Chosen block for testing: 4
+client2_test:
+ Loss test:0.182
+balanced accuracy test:0.946
+Chosen block for testing: 1
+client3_test:
+ Loss test:0.178
+balanced accuracy test:0.940
+Chosen block for testing: 3
+client4_test:
+ Loss test:0.265
+balanced accuracy test:0.921
+Chosen block for testing: 1
+client5_test:
+ Loss test:0.178
+balanced accuracy test:0.940
+Global metrics (round 16): BalancedAcc=0.9375, Precision=0.9393, Recall=0.9345, F1=0.9336, MeanTestLoss=0.2032
+{'round': 16, 'balanced_acc': 0.937530848447854, 'precision': 0.9392566840476492, 'recall': 0.9344733508720647, 'f1': 0.9335981721220766, 'mean_test_loss': 0.20320219380988014, 'mean_train_loss': 0.13911266515786777}
+
+================ END OF ROUND =================
+
+
+================= ROUND 17/30 =================
+
+Chosen Block:2 for client 0
+client0_train:
+ Loss train:0.144
+balanced accuracy train:0.928
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.43 sec | CPU_RSS=16392.316 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 1
+client1_train:
+ Loss train:0.079
+balanced accuracy train:0.950
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.08 sec | CPU_RSS=16338.367 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:6 for client 2
+client2_train:
+ Loss train:0.100
+balanced accuracy train:0.928
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.81 sec | CPU_RSS=16365.281 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 3
+client3_train:
+ Loss train:0.212
+balanced accuracy train:0.922
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.51 sec | CPU_RSS=16365.281 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:2 for client 4
+client4_train:
+ Loss train:0.258
+balanced accuracy train:0.904
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 72.04 sec | CPU_RSS=16365.281 MB | GPU_peak_reserved=8360.0 MB
+
+Chosen Block:6 for client 5
+client5_train:
+ Loss train:0.184
+balanced accuracy train:0.943
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.76 sec | CPU_RSS=16365.281 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.69 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 2
+client0_test:
+ Loss test:0.690
+balanced accuracy test:0.790
+Chosen block for testing: 2
+client1_test:
+ Loss test:1.660
+balanced accuracy test:0.689
+Chosen block for testing: 6
+client2_test:
+ Loss test:0.619
+balanced accuracy test:0.866
+Chosen block for testing: 2
+client3_test:
+ Loss test:0.756
+balanced accuracy test:0.789
+Chosen block for testing: 2
+client4_test:
+ Loss test:0.467
+balanced accuracy test:0.804
+Chosen block for testing: 6
+client5_test:
+ Loss test:0.152
+balanced accuracy test:0.928
+Global metrics (round 17): BalancedAcc=0.8109, Precision=0.8294, Recall=0.8101, F1=0.7968, MeanTestLoss=0.7241
+{'round': 17, 'balanced_acc': 0.8109153266204265, 'precision': 0.8294241469309067, 'recall': 0.810143232972815, 'f1': 0.7967964771684454, 'mean_test_loss': 0.7240706638053611, 'mean_train_loss': 0.1627754767749303}
+
+================ END OF ROUND =================
+
+
+================= ROUND 18/30 =================
+
+Chosen Block:5 for client 0
+client0_train:
+ Loss train:0.139
+balanced accuracy train:0.917
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.56 sec | CPU_RSS=16382.301 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 1
+client1_train:
+ Loss train:0.059
+balanced accuracy train:0.954
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.05 sec | CPU_RSS=16382.301 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 2
+client2_train:
+ Loss train:0.097
+balanced accuracy train:0.939
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.79 sec | CPU_RSS=16382.301 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 3
+client3_train:
+ Loss train:0.174
+balanced accuracy train:0.937
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.60 sec | CPU_RSS=16382.301 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 4
+client4_train:
+ Loss train:0.205
+balanced accuracy train:0.895
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.62 sec | CPU_RSS=16382.301 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 5
+client5_train:
+ Loss train:0.183
+balanced accuracy train:0.936
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.09 sec | CPU_RSS=16382.301 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.56 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 5
+client0_test:
+ Loss test:0.155
+balanced accuracy test:0.945
+Chosen block for testing: 2
+client1_test:
+ Loss test:0.251
+balanced accuracy test:0.913
+Chosen block for testing: 2
+client2_test:
+ Loss test:0.251
+balanced accuracy test:0.913
+Chosen block for testing: 6
+client3_test:
+ Loss test:0.191
+balanced accuracy test:0.934
+Chosen block for testing: 5
+client4_test:
+ Loss test:0.155
+balanced accuracy test:0.945
+Chosen block for testing: 6
+client5_test:
+ Loss test:0.191
+balanced accuracy test:0.934
+Global metrics (round 18): BalancedAcc=0.9306, Precision=0.9459, Recall=0.9432, F1=0.9403, MeanTestLoss=0.1992
+{'round': 18, 'balanced_acc': 0.9305528030706962, 'precision': 0.9458799580692056, 'recall': 0.9431939978563773, 'f1': 0.9403420082095094, 'mean_test_loss': 0.19915344524714684, 'mean_train_loss': 0.14281784605512263}
+
+================ END OF ROUND =================
+
+
+================= ROUND 19/30 =================
+
+Chosen Block:2 for client 0
+client0_train:
+ Loss train:0.108
+balanced accuracy train:0.928
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.32 sec | CPU_RSS=16367.699 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.065
+balanced accuracy train:0.944
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.57 sec | CPU_RSS=16367.699 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 2
+client2_train:
+ Loss train:0.070
+balanced accuracy train:0.952
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.82 sec | CPU_RSS=16367.699 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 3
+client3_train:
+ Loss train:0.119
+balanced accuracy train:0.955
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.61 sec | CPU_RSS=16367.699 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 4
+client4_train:
+ Loss train:0.154
+balanced accuracy train:0.932
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.39 sec | CPU_RSS=16367.699 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 5
+client5_train:
+ Loss train:0.134
+balanced accuracy train:0.948
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 70.72 sec | CPU_RSS=16367.699 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.94 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 2
+client0_test:
+ Loss test:1.609
+balanced accuracy test:0.508
+Chosen block for testing: 6
+client1_test:
+ Loss test:0.815
+balanced accuracy test:0.744
+Chosen block for testing: 2
+client2_test:
+ Loss test:1.172
+balanced accuracy test:0.620
+Chosen block for testing: 3
+client3_test:
+ Loss test:0.592
+balanced accuracy test:0.776
+Chosen block for testing: 5
+client4_test:
+ Loss test:0.219
+balanced accuracy test:0.891
+Chosen block for testing: 4
+client5_test:
+ Loss test:0.135
+balanced accuracy test:0.934
+Global metrics (round 19): BalancedAcc=0.7453, Precision=0.8388, Recall=0.7676, F1=0.7750, MeanTestLoss=0.7572
+{'round': 19, 'balanced_acc': 0.7452944708462066, 'precision': 0.8387710812572664, 'recall': 0.7675630907142161, 'f1': 0.7749597687199256, 'mean_test_loss': 0.7572242389260618, 'mean_train_loss': 0.10838241554163242}
+
+================ END OF ROUND =================
+
+
+================= ROUND 20/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.102
+balanced accuracy train:0.921
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.45 sec | CPU_RSS=16384.242 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 1
+client1_train:
+ Loss train:0.069
+balanced accuracy train:0.943
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 71.65 sec | CPU_RSS=16411.277 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 2
+client2_train:
+ Loss train:0.077
+balanced accuracy train:0.954
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.43 sec | CPU_RSS=16411.277 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 3
+client3_train:
+ Loss train:0.125
+balanced accuracy train:0.945
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.78 sec | CPU_RSS=16411.277 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 4
+client4_train:
+ Loss train:0.198
+balanced accuracy train:0.899
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 71.87 sec | CPU_RSS=16411.277 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 5
+client5_train:
+ Loss train:0.150
+balanced accuracy train:0.943
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.83 sec | CPU_RSS=16411.277 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.64 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.301
+balanced accuracy test:0.913
+Chosen block for testing: 4
+client1_test:
+ Loss test:0.227
+balanced accuracy test:0.927
+Chosen block for testing: 2
+client2_test:
+ Loss test:0.247
+balanced accuracy test:0.922
+Chosen block for testing: 2
+client3_test:
+ Loss test:0.247
+balanced accuracy test:0.922
+Chosen block for testing: 1
+client4_test:
+ Loss test:0.267
+balanced accuracy test:0.906
+Chosen block for testing: 2
+client5_test:
+ Loss test:0.247
+balanced accuracy test:0.922
+Global metrics (round 20): BalancedAcc=0.9186, Precision=0.9221, Recall=0.9175, F1=0.9164, MeanTestLoss=0.2562
+{'round': 20, 'balanced_acc': 0.9185887269874486, 'precision': 0.9221222997243865, 'recall': 0.917470525187567, 'f1': 0.9163706624843952, 'mean_test_loss': 0.25618434076507884, 'mean_train_loss': 0.12027866181253144}
+Saved pickles to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS
+Saved state_dict to: vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/final_state_dict.pth
+Saved full model to: vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/final_full_model.pth
+Saved per-client plots to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/plots_per_client
+Saved global plots to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/plots_global
+Saved global confusion matrix to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/confusion_global/global_confusion_matrix.png
+
+================ END OF ROUND =================
+
+
+================= ROUND 21/30 =================
+
+Chosen Block:5 for client 0
+client0_train:
+ Loss train:0.107
+balanced accuracy train:0.920
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 84.45 sec | CPU_RSS=16395.969 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.050
+balanced accuracy train:0.963
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.08 sec | CPU_RSS=16395.969 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 2
+client2_train:
+ Loss train:0.061
+balanced accuracy train:0.955
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 71.76 sec | CPU_RSS=16423.008 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 3
+client3_train:
+ Loss train:0.150
+balanced accuracy train:0.956
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.89 sec | CPU_RSS=16369.059 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.163
+balanced accuracy train:0.948
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.59 sec | CPU_RSS=16395.969 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 5
+client5_train:
+ Loss train:0.146
+balanced accuracy train:0.947
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 70.72 sec | CPU_RSS=16423.008 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.50 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 5
+client0_test:
+ Loss test:0.239
+balanced accuracy test:0.917
+Chosen block for testing: 6
+client1_test:
+ Loss test:0.276
+balanced accuracy test:0.908
+Chosen block for testing: 5
+client2_test:
+ Loss test:0.546
+balanced accuracy test:0.878
+Chosen block for testing: 3
+client3_test:
+ Loss test:0.529
+balanced accuracy test:0.828
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.319
+balanced accuracy test:0.883
+Chosen block for testing: 6
+client5_test:
+ Loss test:0.113
+balanced accuracy test:0.954
+Global metrics (round 21): BalancedAcc=0.8943, Precision=0.9009, Recall=0.8957, F1=0.8933, MeanTestLoss=0.3370
+{'round': 21, 'balanced_acc': 0.894328861965427, 'precision': 0.9008659236667594, 'recall': 0.8957419857741401, 'f1': 0.8932602438071644, 'mean_test_loss': 0.33703003262232895, 'mean_train_loss': 0.11291558122563196}
+
+================ END OF ROUND =================
+
+
+================= ROUND 22/30 =================
+
+Chosen Block:5 for client 0
+client0_train:
+ Loss train:0.091
+balanced accuracy train:0.949
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.33 sec | CPU_RSS=16369.375 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 1
+client1_train:
+ Loss train:0.072
+balanced accuracy train:0.945
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.24 sec | CPU_RSS=16396.285 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 2
+client2_train:
+ Loss train:0.093
+balanced accuracy train:0.936
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 72.18 sec | CPU_RSS=16396.285 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 3
+client3_train:
+ Loss train:0.165
+balanced accuracy train:0.948
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.91 sec | CPU_RSS=16396.285 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 4
+client4_train:
+ Loss train:0.188
+balanced accuracy train:0.920
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.45 sec | CPU_RSS=16396.285 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 5
+client5_train:
+ Loss train:0.174
+balanced accuracy train:0.930
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.98 sec | CPU_RSS=16396.285 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.85 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 5
+client0_test:
+ Loss test:0.265
+balanced accuracy test:0.926
+Chosen block for testing: 2
+client1_test:
+ Loss test:0.231
+balanced accuracy test:0.931
+Chosen block for testing: 1
+client2_test:
+ Loss test:0.293
+balanced accuracy test:0.912
+Chosen block for testing: 4
+client3_test:
+ Loss test:0.245
+balanced accuracy test:0.929
+Chosen block for testing: 1
+client4_test:
+ Loss test:0.293
+balanced accuracy test:0.912
+Chosen block for testing: 2
+client5_test:
+ Loss test:0.231
+balanced accuracy test:0.931
+Global metrics (round 22): BalancedAcc=0.9235, Precision=0.9254, Recall=0.9187, F1=0.9177, MeanTestLoss=0.2598
+{'round': 22, 'balanced_acc': 0.9234972632301515, 'precision': 0.9254034716333462, 'recall': 0.9186884926434765, 'f1': 0.9176786802769915, 'mean_test_loss': 0.2597963000291292, 'mean_train_loss': 0.13064018259766375}
+
+================ END OF ROUND =================
+
+
+================= ROUND 23/30 =================
+
+Chosen Block:2 for client 0
+client0_train:
+ Loss train:0.102
+balanced accuracy train:0.918
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.03 sec | CPU_RSS=16397.691 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.058
+balanced accuracy train:0.957
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.17 sec | CPU_RSS=16347.617 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 2
+client2_train:
+ Loss train:0.083
+balanced accuracy train:0.945
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 73.24 sec | CPU_RSS=16370.656 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 3
+client3_train:
+ Loss train:0.182
+balanced accuracy train:0.926
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.72 sec | CPU_RSS=16370.656 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.175
+balanced accuracy train:0.936
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 72.22 sec | CPU_RSS=16370.656 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.171
+balanced accuracy train:0.932
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 71.85 sec | CPU_RSS=16370.656 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.68 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 2
+client0_test:
+ Loss test:0.406
+balanced accuracy test:0.855
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.316
+balanced accuracy test:0.891
+Chosen block for testing: 3
+client2_test:
+ Loss test:0.511
+balanced accuracy test:0.855
+Chosen block for testing: 5
+client3_test:
+ Loss test:0.365
+balanced accuracy test:0.878
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.260
+balanced accuracy test:0.894
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.184
+balanced accuracy test:0.934
+Global metrics (round 23): BalancedAcc=0.8847, Precision=0.9052, Recall=0.8962, F1=0.8953, MeanTestLoss=0.3401
+{'round': 23, 'balanced_acc': 0.8846904100391912, 'precision': 0.9052349338303521, 'recall': 0.8962291727565039, 'f1': 0.8953207172777647, 'mean_test_loss': 0.34009010708649395, 'mean_train_loss': 0.1284717331707735}
+
+================ END OF ROUND =================
+
+
+================= ROUND 24/30 =================
+
+Chosen Block:5 for client 0
+client0_train:
+ Loss train:0.113
+balanced accuracy train:0.930
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.09 sec | CPU_RSS=16387.281 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 1
+client1_train:
+ Loss train:0.080
+balanced accuracy train:0.930
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 71.77 sec | CPU_RSS=16401.508 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 2
+client2_train:
+ Loss train:0.057
+balanced accuracy train:0.956
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 73.29 sec | CPU_RSS=16401.508 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 3
+client3_train:
+ Loss train:0.150
+balanced accuracy train:0.945
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 72.00 sec | CPU_RSS=16351.434 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 4
+client4_train:
+ Loss train:0.186
+balanced accuracy train:0.925
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 73.44 sec | CPU_RSS=16374.473 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.166
+balanced accuracy train:0.922
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.06 sec | CPU_RSS=16374.473 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.53 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 5
+client0_test:
+ Loss test:0.137
+balanced accuracy test:0.961
+Chosen block for testing: 1
+client1_test:
+ Loss test:0.280
+balanced accuracy test:0.887
+Chosen block for testing: 2
+client2_test:
+ Loss test:0.183
+balanced accuracy test:0.939
+Chosen block for testing: 5
+client3_test:
+ Loss test:0.137
+balanced accuracy test:0.961
+Chosen block for testing: 1
+client4_test:
+ Loss test:0.280
+balanced accuracy test:0.887
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.195
+balanced accuracy test:0.946
+Global metrics (round 24): BalancedAcc=0.9300, Precision=0.9399, Recall=0.9396, F1=0.9384, MeanTestLoss=0.2020
+{'round': 24, 'balanced_acc': 0.9299810550259986, 'precision': 0.9399271651655695, 'recall': 0.9395888141868849, 'f1': 0.9383877551495389, 'mean_test_loss': 0.2019531510333404, 'mean_train_loss': 0.1256193836751177}
+
+================ END OF ROUND =================
+
+
+================= ROUND 25/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.107
+balanced accuracy train:0.936
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 66.95 sec | CPU_RSS=16386.633 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.069
+balanced accuracy train:0.944
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 72.06 sec | CPU_RSS=16386.633 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 2
+client2_train:
+ Loss train:0.070
+balanced accuracy train:0.945
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 73.63 sec | CPU_RSS=16386.633 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 3
+client3_train:
+ Loss train:0.206
+balanced accuracy train:0.921
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 70.94 sec | CPU_RSS=16386.633 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 4
+client4_train:
+ Loss train:0.161
+balanced accuracy train:0.919
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 73.28 sec | CPU_RSS=16386.633 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 5
+client5_train:
+ Loss train:0.122
+balanced accuracy train:0.955
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.15 sec | CPU_RSS=16386.633 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.36 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.493
+balanced accuracy test:0.857
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.392
+balanced accuracy test:0.894
+Chosen block for testing: 6
+client2_test:
+ Loss test:1.100
+balanced accuracy test:0.795
+Chosen block for testing: 3
+client3_test:
+ Loss test:0.441
+balanced accuracy test:0.823
+Chosen block for testing: 3
+client4_test:
+ Loss test:0.192
+balanced accuracy test:0.908
+Chosen block for testing: 4
+client5_test:
+ Loss test:0.186
+balanced accuracy test:0.936
+Global metrics (round 25): BalancedAcc=0.8688, Precision=0.8705, Recall=0.8651, F1=0.8632, MeanTestLoss=0.4672
+{'round': 25, 'balanced_acc': 0.8688151950766307, 'precision': 0.8704766851972936, 'recall': 0.8651466432816916, 'f1': 0.8631907196148659, 'mean_test_loss': 0.46722100005933526, 'mean_train_loss': 0.12254363626459858}
+
+================ END OF ROUND =================
+
+
+================= ROUND 26/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.093
+balanced accuracy train:0.929
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 66.97 sec | CPU_RSS=16388.809 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 1
+client1_train:
+ Loss train:0.048
+balanced accuracy train:0.961
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 73.51 sec | CPU_RSS=16403.035 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 2
+client2_train:
+ Loss train:0.097
+balanced accuracy train:0.932
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 72.34 sec | CPU_RSS=16403.035 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 3
+client3_train:
+ Loss train:0.199
+balanced accuracy train:0.919
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 72.16 sec | CPU_RSS=16403.035 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 4
+client4_train:
+ Loss train:0.173
+balanced accuracy train:0.932
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 72.17 sec | CPU_RSS=16403.035 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.102
+balanced accuracy train:0.961
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 73.34 sec | CPU_RSS=16403.035 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.66 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.319
+balanced accuracy test:0.923
+Chosen block for testing: 4
+client1_test:
+ Loss test:0.173
+balanced accuracy test:0.948
+Chosen block for testing: 1
+client2_test:
+ Loss test:0.281
+balanced accuracy test:0.892
+Chosen block for testing: 4
+client3_test:
+ Loss test:0.173
+balanced accuracy test:0.948
+Chosen block for testing: 3
+client4_test:
+ Loss test:0.182
+balanced accuracy test:0.949
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.182
+balanced accuracy test:0.949
+Global metrics (round 26): BalancedAcc=0.9348, Precision=0.9328, Recall=0.9289, F1=0.9284, MeanTestLoss=0.2180
+{'round': 26, 'balanced_acc': 0.9348044003388352, 'precision': 0.9328356140254123, 'recall': 0.928919419273117, 'f1': 0.9284002844126206, 'mean_test_loss': 0.2179881772831266, 'mean_train_loss': 0.11867202870847726}
+
+================ END OF ROUND =================
+
+
+================= ROUND 27/30 =================
+
+Chosen Block:4 for client 0
+client0_train:
+ Loss train:0.096
+balanced accuracy train:0.937
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 67.22 sec | CPU_RSS=16400.566 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 1
+client1_train:
+ Loss train:0.060
+balanced accuracy train:0.950
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 73.40 sec | CPU_RSS=16400.566 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 2
+client2_train:
+ Loss train:0.063
+balanced accuracy train:0.954
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 75.09 sec | CPU_RSS=16400.566 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 3
+client3_train:
+ Loss train:0.141
+balanced accuracy train:0.949
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 75.53 sec | CPU_RSS=16400.566 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 4
+client4_train:
+ Loss train:0.200
+balanced accuracy train:0.913
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 72.68 sec | CPU_RSS=16400.566 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:6 for client 5
+client5_train:
+ Loss train:0.111
+balanced accuracy train:0.954
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.83 sec | CPU_RSS=16400.566 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 78.19 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 4
+client0_test:
+ Loss test:0.425
+balanced accuracy test:0.847
+Chosen block for testing: 6
+client1_test:
+ Loss test:0.824
+balanced accuracy test:0.689
+Chosen block for testing: 6
+client2_test:
+ Loss test:0.462
+balanced accuracy test:0.850
+Chosen block for testing: 4
+client3_test:
+ Loss test:0.224
+balanced accuracy test:0.922
+Chosen block for testing: 2
+client4_test:
+ Loss test:0.252
+balanced accuracy test:0.893
+Chosen block for testing: 6
+client5_test:
+ Loss test:0.315
+balanced accuracy test:0.876
+Global metrics (round 27): BalancedAcc=0.8461, Precision=0.8678, Recall=0.8623, F1=0.8587, MeanTestLoss=0.4172
+{'round': 27, 'balanced_acc': 0.8460639426393802, 'precision': 0.8677929683507156, 'recall': 0.8622722400857449, 'f1': 0.8587424827687197, 'mean_test_loss': 0.41718665862249, 'mean_train_loss': 0.11194348870907682}
+
+================ END OF ROUND =================
+
+
+================= ROUND 28/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.096
+balanced accuracy train:0.947
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 66.58 sec | CPU_RSS=16418.34 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 1
+client1_train:
+ Loss train:0.086
+balanced accuracy train:0.928
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 73.24 sec | CPU_RSS=16418.34 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 2
+client2_train:
+ Loss train:0.054
+balanced accuracy train:0.949
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 73.48 sec | CPU_RSS=16418.34 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 3
+client3_train:
+ Loss train:0.144
+balanced accuracy train:0.942
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 71.70 sec | CPU_RSS=16418.34 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 4
+client4_train:
+ Loss train:0.143
+balanced accuracy train:0.938
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 73.23 sec | CPU_RSS=16418.34 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 5
+client5_train:
+ Loss train:0.108
+balanced accuracy train:0.953
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 73.08 sec | CPU_RSS=16418.34 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.43 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.232
+balanced accuracy test:0.932
+Chosen block for testing: 1
+client1_test:
+ Loss test:0.387
+balanced accuracy test:0.872
+Chosen block for testing: 3
+client2_test:
+ Loss test:0.209
+balanced accuracy test:0.934
+Chosen block for testing: 1
+client3_test:
+ Loss test:0.387
+balanced accuracy test:0.872
+Chosen block for testing: 4
+client4_test:
+ Loss test:0.147
+balanced accuracy test:0.953
+Chosen block for testing: 4
+client5_test:
+ Loss test:0.147
+balanced accuracy test:0.953
+Global metrics (round 28): BalancedAcc=0.9195, Precision=0.9277, Recall=0.9235, F1=0.9216, MeanTestLoss=0.2515
+{'round': 28, 'balanced_acc': 0.91951849646534, 'precision': 0.9277117925705068, 'recall': 0.9234629250706421, 'f1': 0.9216114812736055, 'mean_test_loss': 0.2514950295473322, 'mean_train_loss': 0.10503092222352416}
+
+================ END OF ROUND =================
+
+
+================= ROUND 29/30 =================
+
+Chosen Block:6 for client 0
+client0_train:
+ Loss train:0.104
+balanced accuracy train:0.930
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=6 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 66.64 sec | CPU_RSS=16403.336 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 1
+client1_train:
+ Loss train:0.046
+balanced accuracy train:0.964
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 73.15 sec | CPU_RSS=16403.336 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 2
+client2_train:
+ Loss train:0.049
+balanced accuracy train:0.968
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 73.43 sec | CPU_RSS=16403.336 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 3
+client3_train:
+ Loss train:0.119
+balanced accuracy train:0.946
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 73.22 sec | CPU_RSS=16403.336 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 4
+client4_train:
+ Loss train:0.149
+balanced accuracy train:0.929
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 72.08 sec | CPU_RSS=16403.336 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:5 for client 5
+client5_train:
+ Loss train:0.108
+balanced accuracy train:0.963
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=5 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.22 sec | CPU_RSS=16403.336 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.50 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 6
+client0_test:
+ Loss test:0.946
+balanced accuracy test:0.751
+Chosen block for testing: 5
+client1_test:
+ Loss test:0.245
+balanced accuracy test:0.937
+Chosen block for testing: 5
+client2_test:
+ Loss test:0.473
+balanced accuracy test:0.850
+Chosen block for testing: 4
+client3_test:
+ Loss test:0.185
+balanced accuracy test:0.950
+Chosen block for testing: 5
+client4_test:
+ Loss test:0.243
+balanced accuracy test:0.894
+Chosen block for testing: 5
+client5_test:
+ Loss test:0.139
+balanced accuracy test:0.941
+Global metrics (round 29): BalancedAcc=0.8872, Precision=0.8964, Recall=0.8884, F1=0.8863, MeanTestLoss=0.3718
+{'round': 29, 'balanced_acc': 0.8872257363237295, 'precision': 0.896362390134179, 'recall': 0.8884341810386827, 'f1': 0.8862859305327538, 'mean_test_loss': 0.3717836777530151, 'mean_train_loss': 0.09584395120380539}
+
+================ END OF ROUND =================
+
+
+================= ROUND 30/30 =================
+
+Chosen Block:1 for client 0
+client0_train:
+ Loss train:0.131
+balanced accuracy train:0.920
+[DEBUG SplitFeSViBS.train_round] client 0 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 0...
+    client 0 last_block → 866 chunks
+    client 0 cls → 1 chunks
+    client 0 pos_embed → 19 chunks
+    [HE] Encryption of client 0 done in 65.41 sec | CPU_RSS=16420.328 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:2 for client 1
+client1_train:
+ Loss train:0.069
+balanced accuracy train:0.948
+[DEBUG SplitFeSViBS.train_round] client 1 → chosen_block=2 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 1...
+    client 1 last_block → 866 chunks
+    client 1 cls → 1 chunks
+    client 1 pos_embed → 19 chunks
+    [HE] Encryption of client 1 done in 73.55 sec | CPU_RSS=16420.328 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:4 for client 2
+client2_train:
+ Loss train:0.042
+balanced accuracy train:0.972
+[DEBUG SplitFeSViBS.train_round] client 2 → chosen_block=4 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 2...
+    client 2 last_block → 866 chunks
+    client 2 cls → 1 chunks
+    client 2 pos_embed → 19 chunks
+    [HE] Encryption of client 2 done in 70.44 sec | CPU_RSS=16420.328 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 3
+client3_train:
+ Loss train:0.161
+balanced accuracy train:0.948
+[DEBUG SplitFeSViBS.train_round] client 3 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 3...
+    client 3 last_block → 866 chunks
+    client 3 cls → 1 chunks
+    client 3 pos_embed → 19 chunks
+    [HE] Encryption of client 3 done in 72.42 sec | CPU_RSS=16420.328 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:1 for client 4
+client4_train:
+ Loss train:0.146
+balanced accuracy train:0.937
+[DEBUG SplitFeSViBS.train_round] client 4 → chosen_block=1 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 4...
+    client 4 last_block → 866 chunks
+    client 4 cls → 1 chunks
+    client 4 pos_embed → 19 chunks
+    [HE] Encryption of client 4 done in 70.52 sec | CPU_RSS=16420.328 MB | GPU_peak_reserved=8362.0 MB
+
+Chosen Block:3 for client 5
+client5_train:
+ Loss train:0.096
+balanced accuracy train:0.970
+[DEBUG SplitFeSViBS.train_round] client 5 → chosen_block=3 | last_block=present | last_block_shape=torch.Size([7087872])
+[HE] Encrypting updates from client 5...
+    client 5 last_block → 866 chunks
+    client 5 cls → 1 chunks
+    client 5 pos_embed → 19 chunks
+    [HE] Encryption of client 5 done in 72.33 sec | CPU_RSS=16420.328 MB | GPU_peak_reserved=8362.0 MB
+
+[HE] Starting homomorphic averaging...
+[HE] Decoded averaged last-block.
+[HE] Decoded averaged cls.
+[HE] Decoded averaged pos_embed.
+[HE] Homomorphic averaging + decryption finished in 76.34 seconds
+
+[HE] Applying aggregated weights to global model...
+[HE] Updated last transformer block.
+[HE] Updated cls_token.
+[HE] Updated pos_embed.
+[HE] Global model updated.
+
+[FeSViBS] Performing head/tail federation...
+[Eval] Starting evaluation for all clients...
+Chosen block for testing: 1
+client0_test:
+ Loss test:0.444
+balanced accuracy test:0.860
+Chosen block for testing: 2
+client1_test:
+ Loss test:0.232
+balanced accuracy test:0.931
+Chosen block for testing: 4
+client2_test:
+ Loss test:0.220
+balanced accuracy test:0.947
+Chosen block for testing: 1
+client3_test:
+ Loss test:0.444
+balanced accuracy test:0.860
+Chosen block for testing: 1
+client4_test:
+ Loss test:0.444
+balanced accuracy test:0.860
+Chosen block for testing: 3
+client5_test:
+ Loss test:0.248
+balanced accuracy test:0.937
+Global metrics (round 30): BalancedAcc=0.8991, Precision=0.9124, Recall=0.8904, F1=0.8910, MeanTestLoss=0.3386
+{'round': 30, 'balanced_acc': 0.8990510243642558, 'precision': 0.9124200863864065, 'recall': 0.890382928968138, 'f1': 0.8910267071714107, 'mean_test_loss': 0.33859494098542653, 'mean_train_loss': 0.10743083136173164}
+Saved pickles to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS
+Saved state_dict to: vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/final_state_dict.pth
+Saved full model to: vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/final_full_model.pth
+Saved per-client plots to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/plots_per_client
+Saved global plots to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/plots_global
+Saved global confusion matrix to vit_base_r50_s16_224_0.0001lr_bloodmnist_6Clients_1to6Blocks_32Batch_FeSViBS/confusion_global/global_confusion_matrix.png
+
+================ END OF ROUND =================
+
