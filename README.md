@@ -1,28 +1,16 @@
----
-
-title: "Federated Learning with Homomorphic Encryption"
-emoji: "🧠"
-colorFrom: "blue"
-colorTo: "indigo"
-sdk: "streamlit"
-app_file: "app/app.py"
-pinned: false
-
----
-
 # Federated Vision Transformer with Homomorphic Encryption for Privacy-Preserving Medical AI
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
 ![Status](https://img.shields.io/badge/Status-Research%20Project-green)
 
-A scalable federated learning framework for medical image classification under non-IID data distribution, integrating Vision Transformers with CKKS-based homomorphic encryption for secure and privacy-preserving model aggregation.
+A federated learning framework for medical image classification under non-IID data distribution, integrating Vision Transformers (ViT) with CKKS-based homomorphic encryption to enable secure and privacy-preserving model aggregation.
 
 ---
 
 ## Overview
 
-This project addresses the challenge of training deep learning models on sensitive medical data distributed across multiple institutions, where data sharing is not permitted.
+This project addresses the challenge of training deep learning models across multiple medical institutions without sharing sensitive patient data.
 
 The system combines:
 
@@ -30,7 +18,7 @@ The system combines:
 * Vision Transformers (ViT)
 * Homomorphic Encryption (CKKS via TenSEAL)
 
-to enable **secure model training without exposing raw data**.
+to ensure **data privacy while maintaining high predictive performance**.
 
 ---
 
@@ -46,9 +34,9 @@ to enable **secure model training without exposing raw data**.
 
 ## System Architecture
 
-![Architecture](assets/architecture.png)
+![Architecture](https://raw.githubusercontent.com/Alishajindal/federated-learning-he/main/assets/architecture.png)
 
-The system simulates multiple distributed clients performing local training. Only encrypted model parameters are transmitted to a central server.
+The system simulates distributed clients performing local training. Only encrypted model parameters are transmitted to a central server.
 
 * No raw data exchange
 * Encrypted parameter sharing
@@ -59,7 +47,7 @@ The system simulates multiple distributed clients performing local training. Onl
 ## Dataset
 
 * BloodMNIST (MedMNIST v2)
-* 8-class classification
+* 8-class classification problem
 * 17,092 samples
 * Non-IID distribution across 6 clients
 
@@ -81,17 +69,13 @@ The system simulates multiple distributed clients performing local training. Onl
 
 ### Global Accuracy Trend
 
-![Accuracy](assets/accuracy.png)
-
-The model demonstrates stable convergence under non-IID conditions.
+![Accuracy](https://raw.githubusercontent.com/Alishajindal/federated-learning-he/main/assets/accuracy.png)
 
 ---
 
 ### Confusion Matrix (Final Round)
 
-![Confusion Matrix](assets/confusion_matrix.png)
-
-The strong diagonal structure indicates consistent classification performance across all classes.
+![Confusion Matrix](https://raw.githubusercontent.com/Alishajindal/federated-learning-he/main/assets/confusion__matrix.png)
 
 ---
 
@@ -99,10 +83,10 @@ The strong diagonal structure indicates consistent classification performance ac
 
 ### Encryption Overhead
 
-![Encryption Time](assets/encryption_time.png)
+![Encryption Time](https://raw.githubusercontent.com/Alishajindal/federated-learning-he/main/assets/encryption_time.png)
 
 * Average encryption time per client: ~65–73 seconds
-* Homomorphic aggregation + decryption: ~69 seconds
+* Homomorphic aggregation and decryption: ~69 seconds
 
 ---
 
@@ -110,20 +94,21 @@ The strong diagonal structure indicates consistent classification performance ac
 
 * Homomorphic encryption introduces **<1% accuracy degradation**
 * Selective encryption significantly reduces computational overhead
-* Stable convergence achieved under non-IID settings
-* Demonstrates feasibility of privacy-preserving AI in healthcare environments
+* Stable convergence under non-IID data distribution
+* Demonstrates feasibility of privacy-preserving AI in healthcare
 
 ---
 
 ## Repository Structure
 
-```bash
-src/        # Federated learning pipeline
-models/     # Model architectures
-he/         # Homomorphic encryption logic
-app/        # Streamlit interface and inference
-data/       # Dataset handling and preprocessing
-assets/     # Selected visualizations for documentation
+```
+src/        Federated learning pipeline
+models/     Model architectures (ViT, FeSViBS)
+he/         Homomorphic encryption utilities
+app/        Streamlit-based inference interface
+data/       Dataset handling and preprocessing
+assets/     Visualization images for documentation
+results/    Logs and evaluation outputs
 ```
 
 ---
@@ -135,24 +120,15 @@ assets/     # Selected visualizations for documentation
 * Vision Transformers
 * TenSEAL (CKKS Homomorphic Encryption)
 * Streamlit
-* Git and Git LFS
 
 ---
 
-## How to Run (Local)
+## Running the Project
 
 ```bash
 pip install -r requirements.txt
 python app/app.py
 ```
-
----
-
-## Demo
-
-The project includes a Streamlit-based interface for inference.
-
-Upload a blood cell image to obtain predictions using the trained Vision Transformer model.
 
 ---
 
@@ -169,6 +145,12 @@ Upload a blood cell image to obtain predictions using the trained Vision Transfo
 * Deployment using Docker and Kubernetes
 * Multi-node federated learning setup
 * Optimization of encryption latency and memory usage
+
+---
+
+## Research Context
+
+This work extends a capstone project into a research manuscript currently under review.
 
 ---
 
