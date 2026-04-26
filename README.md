@@ -1,10 +1,11 @@
 ---
 
-title: Federated Learning with Homomorphic Encryption
-colorFrom: blue
-colorTo: indigo
-sdk: streamlit
-app_file: app/app.py
+title: "Federated Learning with Homomorphic Encryption"
+emoji: "🧠"
+colorFrom: "blue"
+colorTo: "indigo"
+sdk: "streamlit"
+app_file: "app/app.py"
 pinned: false
 -------------
 
