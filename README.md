@@ -1,3 +1,13 @@
+---
+title: Federated Learning with Homomorphic Encryption
+emoji: 🧠
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # Federated Vision Transformer with Homomorphic Encryption for Privacy-Preserving Medical AI
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
