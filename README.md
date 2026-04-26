@@ -8,6 +8,14 @@ A federated learning framework for medical image classification under non-IID da
 
 ---
 
+## Live Demo
+
+A deployed version of the system is available here:
+
+https://huggingface.co/spaces/Alishajindal/federated-learning-he-app
+
+---
+
 ## Overview
 
 This project addresses the challenge of training deep learning models across multiple medical institutions without sharing sensitive patient data.
@@ -150,7 +158,7 @@ python app/app.py
 
 ## Research Context
 
-This work extends a capstone project into a research manuscript currently under review.
+This work originates from a capstone project and has been extended into a research manuscript targeting publication in peer-reviewed venues.
 
 ---
 
