@@ -7,7 +7,8 @@ colorTo: "indigo"
 sdk: "streamlit"
 app_file: "app/app.py"
 pinned: false
--------------
+
+---
 
 # Federated Vision Transformer with Homomorphic Encryption for Privacy-Preserving Medical AI
 
